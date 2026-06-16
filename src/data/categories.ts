@@ -363,9 +363,813 @@ export const categories: Category[] = [
         answer: "STAR stands for Situation (set the scene), Task (describe the challenge/responsibility), Action (explain what you did to solve it), and Result (share the positive outcome and quantifiable metrics)."
       }
     ]
+  },
+  {
+    title: "Express.js Interview Questions",
+    slug: "expressjs",
+    description: "Master routing, middleware, error handling, security, and REST API development with Express.js.",
+    keywords: ["Express.js Interview Questions", "ExpressJS Middleware", "Express Routing Questions", "ExpressJS Security"],
+    updatedAt: "2026-06-15",
+    readingTime: "12 min read",
+    icon: "Server",
+    relatedSlugs: ["nodejs", "javascript", "rest-api", "mongodb"],
+    introduction: "Express.js is the minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. It is the de facto standard server framework for Node.js, making preparing for Express.js questions vital for backend roles.",
+    whyAsk: "Employers ask Express.js questions to evaluate your backend architecture skills, understanding of request-response lifecycles, implementation of custom middleware, API design, and security setups.",
+    whoLearn: "Backend Engineers, Node.js Developers, and Full Stack Engineers using JavaScript/TypeScript.",
+    roadmap: [
+      "Understand Node.js HTTP core module",
+      "Learn basic routing and HTTP request methods in Express",
+      "Master Express middleware execution flow and custom handlers",
+      "Implement robust error-handling middleware",
+      "Integrate databases and build REST APIs",
+      "Apply security best practices (Helmet, CORS, Rate limiting)"
+    ],
+    faq: [
+      {
+        question: "What is middleware in Express.js?",
+        answer: "Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle, typically used to run code, modify requests, or end responses."
+      },
+      {
+        question: "How do you handle errors in Express.js?",
+        answer: "Errors are handled using special error-handling middleware functions that take four arguments instead of three: (err, req, res, next). Express catches sync errors automatically, but async errors must be passed to next(err)."
+      }
+    ]
+  },
+  {
+    title: "Tailwind CSS Interview Questions",
+    slug: "tailwind-css",
+    description: "Learn utility-first CSS concepts, custom configurations, responsive design, and performance optimizations using Tailwind.",
+    keywords: ["Tailwind CSS Interview Questions", "Tailwind CSS Utility First", "Tailwind Configurations", "Tailwind Responsive Design"],
+    updatedAt: "2026-06-15",
+    readingTime: "10 min read",
+    icon: "Palette",
+    relatedSlugs: ["css", "html", "javascript", "react"],
+    introduction: "Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces. Unlike Bootstrap, it doesn't come with pre-designed components, but rather low-level utility classes that let you build completely custom designs without writing CSS.",
+    whyAsk: "Tailwind CSS is highly popular in modern React/Next.js codebases. Interviewers want to check if you understand responsive breakpoint classes, JIT compiler optimizations, and theme customization.",
+    whoLearn: "Frontend Developers, UI Engineers, and Full Stack Developers.",
+    roadmap: [
+      "Learn utility-first principles vs traditional CSS",
+      "Master responsive design using Tailwind breakpoint prefixes",
+      "Understand hover, focus, and other interactive state modifiers",
+      "Customize themes, colors, and layout spacing in tailwind.config.ts",
+      "Optimize production bundle sizes using purging/JIT compilation"
+    ],
+    faq: [
+      {
+        question: "What does utility-first mean in Tailwind?",
+        answer: "Utility-first means styling elements by applying pre-defined, single-purpose class names directly in HTML (e.g., flex, pt-4, text-center) rather than writing custom CSS rules in stylesheets."
+      },
+      {
+        question: "How does Tailwind optimize production CSS file size?",
+        answer: "Tailwind scans your project files for class names, and its JIT compiler generates only the exact CSS used in your codebase, resulting in extremely small production CSS stylesheets (often less than 10KB)."
+      }
+    ]
+  },
+  {
+    title: "Bootstrap Interview Questions",
+    slug: "bootstrap",
+    description: "Master the grid system, responsive utilities, customized themes, and built-in components of Bootstrap.",
+    keywords: ["Bootstrap Interview Questions", "Bootstrap Grid System", "Bootstrap Flexbox Utilities", "Bootstrap Sass customization"],
+    updatedAt: "2026-06-15",
+    readingTime: "9 min read",
+    icon: "Layers",
+    relatedSlugs: ["css", "html", "javascript"],
+    introduction: "Bootstrap is the world's most popular front-end open-source toolkit. It features Sass variables and mixins, a responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.",
+    whyAsk: "Questions assess your proficiency in using standard responsive UI toolkits, building rapid prototypes, and customizing component overrides without breaking spacing architectures.",
+    whoLearn: "Frontend Developers and UI Designers.",
+    roadmap: [
+      "Understand the containers, rows, and 12-column grid layout",
+      "Learn responsive utility classes for spacing, display, and flexbox",
+      "Explore pre-designed components like Modals, Carousels, and Navbars",
+      "Customize Bootstrap theme colors and spacings using Sass variables",
+      "Learn to integrate Bootstrap with modern JS frameworks"
+    ],
+    faq: [
+      {
+        question: "How does the Bootstrap 12-column grid system work?",
+        answer: "It uses containers to align content, rows to group columns, and columns to span up to 12 segments across the viewport, using Flexbox layout mechanics and media query breakpoints."
+      },
+      {
+        question: "What is the difference between .container and .container-fluid?",
+        answer: ".container sets a max-width at each responsive breakpoint (centered with auto-margins), while .container-fluid provides a full-width container spanning the entire width of the viewport."
+      }
+    ]
+  },
+  {
+    title: "Python Interview Questions",
+    slug: "python",
+    description: "Solve Python questions on list comprehensions, decorators, generators, OOP, memory management, and GIL.",
+    keywords: ["Python Interview Questions", "Python Decorators", "Python Generators", "GIL Questions Python", "Python Memory Management"],
+    updatedAt: "2026-06-15",
+    readingTime: "14 min read",
+    icon: "FileCode",
+    relatedSlugs: ["javascript", "sql", "algorithms", "dsa"],
+    introduction: "Python is a high-level, interpreted, general-purpose programming language known for readability and versatility. Python interviews test core mechanics like dynamic typing, list comprehensions, scoping, decorators, and concurrency limitations.",
+    whyAsk: "Python is used extensively in backend development, data engineering, and automation. Companies test your familiarity with Python data structures, memory management, and GIL behavior.",
+    whoLearn: "Backend Developers, Data Engineers, AI Engineers, and Automation Specialists.",
+    roadmap: [
+      "Master core data types (Lists, Dicts, Sets, Tuples) and operations",
+      "Understand scoping (LEGB rule) and namespace lookups",
+      "Learn functional programming (Decorators, Generators, Iterators)",
+      "Master OOP in Python (Inheritance, MRO, Dunder methods)",
+      "Understand concurrency: Threading vs Multiprocessing, and the GIL",
+      "Learn Python package management and testing frameworks"
+    ],
+    faq: [
+      {
+        question: "What is a decorator in Python?",
+        answer: "A decorator is a design pattern in Python that allows you to modify or extend the behavior of a function or class wrapper dynamically without changing its source code."
+      },
+      {
+        question: "What is the Global Interpreter Lock (GIL)?",
+        answer: "The GIL is a mutex that protects access to Python objects, preventing multiple native threads from executing Python bytecodes at once. This makes CPU-bound multi-threading inefficient, requiring multiprocessing instead."
+      }
+    ]
+  },
+  {
+    title: "Java Interview Questions",
+    slug: "java",
+    description: "Prepare for Java developer roles with OOP, JVM architecture, garbage collection, multithreading, and collections framework.",
+    keywords: ["Java Interview Questions", "Java OOP concepts", "JVM architecture GC", "Java Multithreading", "Java Collections Framework"],
+    updatedAt: "2026-06-15",
+    readingTime: "16 min read",
+    icon: "Coffee",
+    relatedSlugs: ["oop", "sql", "dsa", "algorithms"],
+    introduction: "Java is a class-based, object-oriented programming language designed to have as few implementation dependencies as possible (Write Once, Run Anywhere). Java interviews cover OOP principles, memory areas, garbage collection tuning, multithreading synchronization, and the collections framework.",
+    whyAsk: "Java is the backbone of enterprise applications. Employers check if you understand JVM memory structures (Stack vs Heap), Garbage Collection algorithms, thread-safe structures, and clean OOP designs.",
+    whoLearn: "Enterprise Application Developers, Backend Engineers, and Android Developers.",
+    roadmap: [
+      "Master Java basics and core OOP concepts (Inheritance, Polymorphism)",
+      "Learn exception handling, custom exceptions, and try-with-resources",
+      "Master Java Collections Framework (List, Set, Map implementation details)",
+      "Understand Java Multithreading and Concurrency utilities (ExecutorService, Locks)",
+      "Deep dive into JVM architecture, class loaders, and Garbage Collection",
+      "Learn Modern Java features (Lambda expressions, Streams API, Records)"
+    ],
+    faq: [
+      {
+        question: "What is the difference between Stack and Heap memory in Java?",
+        answer: "Stack memory is used for execution thread contexts, local variables, and method calls (fast, temporary, automatically cleaned). Heap memory is used for dynamic allocation of objects, accessible globally, and managed by the Garbage Collector."
+      },
+      {
+        question: "What is the Java Collections Framework?",
+        answer: "It is a unified architecture representing and manipulating collections (lists, sets, maps, queues), providing highly optimized, reusable data structures and algorithms."
+      }
+    ]
+  },
+  {
+    title: "C Programming Interview Questions",
+    slug: "c",
+    description: "Study C language fundamentals, pointers, memory allocation, structures, unions, and preprocessor directives.",
+    keywords: ["C Programming Interview Questions", "C Pointers", "Dynamic Memory Allocation C", "C Structures and Unions"],
+    updatedAt: "2026-06-15",
+    readingTime: "11 min read",
+    icon: "Terminal",
+    relatedSlugs: ["cpp", "dsa", "algorithms", "os"],
+    introduction: "C is a procedural programming language designed for system programming. It provides low-level access to memory, clean syntax, and high speed, forming the basis of operating systems and modern databases.",
+    whyAsk: "C questions test your understanding of machine-level memory layout, address arithmetic, memory leaks, compilation stages, and structure alignment padding.",
+    whoLearn: "Embedded Developers, Systems Engineers, Game Developers, and core library builders.",
+    roadmap: [
+      "Learn data types, operators, and control loops",
+      "Understand pointer syntax, referencing, dereferencing, and pointer arithmetic",
+      "Master dynamic memory allocation (malloc, calloc, realloc, free)",
+      "Learn structures, unions, bit-fields, and memory padding",
+      "Understand preprocessor directives, macros, and conditional compilation",
+      "Master file handling and binary stream operations"
+    ],
+    faq: [
+      {
+        question: "What is the difference between malloc() and calloc()?",
+        answer: "malloc() allocates raw uninitialized memory, leaving garbage values. calloc() allocates memory and initializes all bytes to zero, which takes slightly longer but prevents garbage reads."
+      },
+      {
+        question: "What is a pointer in C?",
+        answer: "A pointer is a variable that stores the physical memory address of another variable, allowing direct memory manipulation and pass-by-reference operations."
+      }
+    ]
+  },
+  {
+    title: "C++ Interview Questions",
+    slug: "cpp",
+    description: "Master C++ interview questions covering OOP, pointers, references, templates, STL, memory management, and smart pointers.",
+    keywords: ["C++ Interview Questions", "C++ Smart Pointers", "C++ STL Questions", "Virtual Functions C++"],
+    updatedAt: "2026-06-15",
+    readingTime: "13 min read",
+    icon: "Code2",
+    relatedSlugs: ["c", "oop", "dsa", "algorithms"],
+    introduction: "C++ is a general-purpose programming language created as an extension of the C programming language, adding object-oriented features. Modern C++ focuses on resource management (RAII), templates, smart pointers, and high performance.",
+    whyAsk: "C++ interviews assess your grasp of object lifecycle (constructors/destructors), memory management safety, the Standard Template Library (STL), and virtual dispatch table polymorphism.",
+    whoLearn: "Systems Programmers, Game Developers, HFT Engineers, and Backend Engineers.",
+    roadmap: [
+      "Understand C++ enhancements over C (namespaces, references, function overloading)",
+      "Master Object-Oriented C++ (classes, access modifiers, constructors, destructors)",
+      "Understand Resource Acquisition Is Initialization (RAII) and Smart Pointers",
+      "Master the Standard Template Library (Containers, Iterators, Algorithms)",
+      "Learn C++ Templates and Generic programming",
+      "Explore Modern C++ features (Move semantics, auto, lambda expressions)"
+    ],
+    faq: [
+      {
+        question: "What are smart pointers in C++?",
+        answer: "Smart pointers (std::unique_ptr, std::shared_ptr, std::weak_ptr) are wrapper classes around raw pointers that automate memory deallocation (using RAII) to prevent memory leaks."
+      },
+      {
+        question: "What is a virtual destructor in C++?",
+        answer: "A virtual destructor in a base class ensures that when a derived class object is deleted via a base class pointer, the derived class's destructor is called first, preventing resource leaks."
+      }
+    ]
+  },
+  {
+    title: "MongoDB Interview Questions",
+    slug: "mongodb",
+    description: "Solve MongoDB questions on document models, indexes, aggregation pipelines, replication, and sharding.",
+    keywords: ["MongoDB Interview Questions", "NoSQL MongoDB Questions", "MongoDB Aggregation Pipeline", "MongoDB Indexing Sharding"],
+    updatedAt: "2026-06-15",
+    readingTime: "12 min read",
+    icon: "Database",
+    relatedSlugs: ["sql", "nodejs", "expressjs", "redis"],
+    introduction: "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database, MongoDB uses JSON-like documents with optional schemas. MongoDB interviews evaluate data modeling, aggregation frameworks, and cluster scaling.",
+    whyAsk: "Companies check NoSQL capabilities to see if you can design flexible schemas, write high-performance aggregation pipelines, manage indexes, and scale storage horizontally.",
+    whoLearn: "Backend Engineers, Full Stack Developers, and Database Administrators.",
+    roadmap: [
+      "Learn Document structure and BSON data formats",
+      "Master CRUD operations and nested document querying",
+      "Understand Indexing types (Single, Compound, Multikey, Text)",
+      "Master the Aggregation Framework (stages, expressions, accumulators)",
+      "Understand Replication (Replica Sets, failover, read/write concerns)",
+      "Learn Sharding architecture and Horizontal scaling"
+    ],
+    faq: [
+      {
+        question: "How does MongoDB differ from relational databases?",
+        answer: "Relational databases store data in tables with strict schemas and foreign-key relationships. MongoDB stores data in flexible BSON documents, encouraging nested structures and horizontal scale-out."
+      },
+      {
+        question: "What is the purpose of the aggregation pipeline in MongoDB?",
+        answer: "The aggregation pipeline is a framework for data aggregation modeled on the concept of data processing pipelines. Documents enter a multi-stage pipeline that transforms them into aggregated results."
+      }
+    ]
+  },
+  {
+    title: "PostgreSQL Interview Questions",
+    slug: "postgresql",
+    description: "Master PostgreSQL topics like MVCC, indexing, foreign keys, query optimization, window functions, and JSONB.",
+    keywords: ["PostgreSQL Interview Questions", "Postgres MVCC", "Postgres Index types", "Query Optimization Postgres"],
+    updatedAt: "2026-06-15",
+    readingTime: "14 min read",
+    icon: "Database",
+    relatedSlugs: ["sql", "mysql", "mongodb", "dbms"],
+    introduction: "PostgreSQL is a powerful, open-source object-relational database system with over 35 years of active development. PostgreSQL interviews focus on advanced SQL queries, performance tuning, indexing types, and MVCC internals.",
+    whyAsk: "PostgreSQL is highly chosen for production workloads. Employers verify if you can optimize queries, handle JSONB indexing, design schemas with appropriate constraints, and understand concurrency locks.",
+    whoLearn: "Backend Developers, Database Engineers, and System Architects.",
+    roadmap: [
+      "Master basic SQL querying and PostgreSQL extensions",
+      "Learn advanced indexing (B-Tree, GIN, GiST, Hash) and usage",
+      "Understand MVCC concurrency control and autovacuum operations",
+      "Master JSONB querying and indexing for semi-structured data",
+      "Optimize queries using EXPLAIN ANALYZE and partition tables",
+      "Configure replication, failover, and high availability systems"
+    ],
+    faq: [
+      {
+        question: "What is MVCC in PostgreSQL?",
+        answer: "Multi-Version Concurrency Control (MVCC) allows readers and writers to access the database concurrently without blocking each other by maintaining multiple physical versions of rows."
+      },
+      {
+        question: "When should you use JSONB over standard relational columns?",
+        answer: "Use JSONB for semi-structured data, dynamic user attributes, or payload logs where schemas change frequently, while keeping core structured data in relational columns for constraints."
+      }
+    ]
+  },
+  {
+    title: "MySQL Interview Questions",
+    slug: "mysql",
+    description: "Prepare for MySQL interview questions covering storage engines (InnoDB vs MyISAM), locking, indexing, and replication.",
+    keywords: ["MySQL Interview Questions", "InnoDB vs MyISAM", "MySQL Indexing", "Replication in MySQL"],
+    updatedAt: "2026-06-15",
+    readingTime: "13 min read",
+    icon: "Database",
+    relatedSlugs: ["sql", "postgresql", "dbms", "nodejs"],
+    introduction: "MySQL is an open-source relational database management system. It is widely used in web applications (like WordPress) and is a central component of the LAMP stack. MySQL interviews assess storage engines, replication strategies, and index optimizations.",
+    whyAsk: "MySQL remains highly popular in web engineering. Interviewers test your understanding of transactional safety (ACID), storage engine trade-offs, and clustering setups.",
+    whoLearn: "Web Developers, Backend Engineers, and Database Administrators.",
+    roadmap: [
+      "Learn relational database design and SQL grammar",
+      "Understand MySQL Storage Engines (InnoDB vs MyISAM differences)",
+      "Master MySQL indexing mechanics and optimization practices",
+      "Understand MySQL locking levels (Row, Table, Page locks)",
+      "Configure Master-Slave and Master-Master Replication setups",
+      "Learn backup, recovery, and point-in-time restoration"
+    ],
+    faq: [
+      {
+        question: "What is the difference between InnoDB and MyISAM engines?",
+        answer: "InnoDB supports transactions (ACID), row-level locking, and foreign keys. MyISAM is older, does not support transactions or foreign keys, uses table-level locking, but can be fast for read-only tables."
+      },
+      {
+        question: "How do you optimize a slow query in MySQL?",
+        answer: "Use the EXPLAIN statement to analyze the execution plan, verify indexes are used, eliminate full table scans, rewrite subqueries as joins, and optimize buffer pool allocations."
+      }
+    ]
+  },
+  {
+    title: "GitHub Interview Questions",
+    slug: "github",
+    description: "Learn GitHub workflows, actions (CI/CD), pull request reviews, branch protection, and project management.",
+    keywords: ["GitHub Interview Questions", "GitHub Actions CI CD", "Pull Request Workflows", "Branch Protection Rules"],
+    updatedAt: "2026-06-15",
+    readingTime: "10 min read",
+    icon: "GitBranch",
+    relatedSlugs: ["git", "docker", "devops"],
+    introduction: "GitHub is a developer platform that allows developers to create, store, manage, and share their code. It adds collaboration tools, code review interfaces, security checking, and CI/CD pipelines (GitHub Actions) to Git version control.",
+    whyAsk: "Employers check GitHub skills to ensure you can integrate smoothly with engineering workflows, write automated pipelines, perform reviews, and follow branch safety rules.",
+    whoLearn: "Software Developers, Devops Engineers, and Team Leads.",
+    roadmap: [
+      "Understand GitHub collaboration (Forking, Cloning, Pull Requests)",
+      "Master code review tools, reviews, changes requesting, and approvals",
+      "Learn GitHub Actions syntax (Workflows, Jobs, Steps, Runners)",
+      "Configure branch protection rules and status check requirements",
+      "Use GitHub package registry and security scanning alerts"
+    ],
+    faq: [
+      {
+        question: "What are GitHub Actions?",
+        answer: "GitHub Actions is an API that automates workflows directly in your repository. It is commonly used for CI/CD tasks like running tests, building release files, and deploying applications."
+      },
+      {
+        question: "What is a branch protection rule?",
+        answer: "It is a setting that restricts how developers can push to specific branches (like main/master), requiring pull reviews, approvals, passing tests, and administrator overrides."
+      }
+    ]
+  },
+  {
+    title: "Docker Interview Questions",
+    slug: "docker",
+    description: "Solve Docker questions on containerization, images, Dockerfiles, volumes, networks, and compose.",
+    keywords: ["Docker Interview Questions", "Docker Containerization", "Dockerfile Best Practices", "Docker Volumes Networks"],
+    updatedAt: "2026-06-15",
+    readingTime: "12 min read",
+    icon: "Layers",
+    relatedSlugs: ["kubernetes", "aws", "git", "linux"],
+    introduction: "Docker is a set of platform-as-a-service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files.",
+    whyAsk: "Docker has revolutionized application deployment. Interviewers want to check if you can write efficient Dockerfiles, manage multi-container systems, and debug container network issues.",
+    whoLearn: "Full Stack Developers, Backend Engineers, DevOps Engineers, and System Architects.",
+    roadmap: [
+      "Understand VM virtualization vs Container isolation",
+      "Master Docker CLI commands (run, build, exec, ps, logs)",
+      "Learn Dockerfile directives (FROM, RUN, COPY, EXPOSE, CMD/ENTRYPOINT)",
+      "Master Docker Volumes for data persistence",
+      "Understand Docker Networking types (Bridge, Host, Overlay)",
+      "Build multi-container architectures using Docker Compose"
+    ],
+    faq: [
+      {
+        question: "What is the difference between a Docker Image and a Container?",
+        answer: "A Docker Image is a read-only template containing the application code and runtime files. A Docker Container is a running instance of an image, adding a writable layer on top."
+      },
+      {
+        question: "What is the difference between CMD and ENTRYPOINT in a Dockerfile?",
+        answer: "ENTRYPOINT defines the executable that runs when the container starts, while CMD defines default arguments for that executable which can be easily overridden from the command line."
+      }
+    ]
+  },
+  {
+    title: "Kubernetes Interview Questions",
+    slug: "kubernetes",
+    description: "Master Kubernetes concepts: Pods, Services, Deployments, ReplicaSets, Ingress, ConfigMaps, and Secrets.",
+    keywords: ["Kubernetes Interview Questions", "K8s Pods Services", "Kubernetes Deployments", "Kubernetes Architecture"],
+    updatedAt: "2026-06-15",
+    readingTime: "15 min read",
+    icon: "Compass",
+    relatedSlugs: ["docker", "aws", "sysdesign", "linux"],
+    introduction: "Kubernetes (K8s) is an open-source container-orchestration system for automating computer application deployment, scaling, and management. Originally designed by Google, it is now maintained by the Cloud Native Computing Foundation.",
+    whyAsk: "As applications grow, managing containers manually becomes impossible. Interviewers ask Kubernetes questions to check if you can design highly available container grids, manage rolling updates, and configure load balancing.",
+    whoLearn: "DevOps Engineers, Cloud Architects, and Backend Systems Developers.",
+    roadmap: [
+      "Understand Container orchestration benefits",
+      "Master Kubernetes control plane (API Server, Etcd, Scheduler) and worker nodes",
+      "Understand Pod lifecycle, ReplicaSets, and Deployments",
+      "Master K8s Networking (ClusterIP, NodePort, LoadBalancer, Ingress)",
+      "Configure persistent storage (PV, PVC, StorageClasses)",
+      "Learn config management using ConfigMaps and Secrets"
+    ],
+    faq: [
+      {
+        question: "What is a Pod in Kubernetes?",
+        answer: "A Pod is the smallest execution unit in Kubernetes, representing a single instance of a running process. It can contain one or more tightly coupled containers sharing storage and network IP."
+      },
+      {
+        question: "What does the Control Plane do in Kubernetes?",
+        answer: "The Control Plane manages the Kubernetes cluster. It makes global decisions (like scheduling), detects and responds to cluster events (like spinning up new pods when replicas fail)."
+      }
+    ]
+  },
+  {
+    title: "Azure Interview Questions",
+    slug: "azure",
+    description: "Prepare for Microsoft Azure interviews: VMs, Blob Storage, App Services, Entra ID (Azure AD), and DevOps.",
+    keywords: ["Azure Interview Questions", "Microsoft Azure Prep", "Azure Blob Storage App Service", "Entra ID Active Directory"],
+    updatedAt: "2026-06-15",
+    readingTime: "15 min read",
+    icon: "Cloud",
+    relatedSlugs: ["aws", "docker", "kubernetes", "linux"],
+    introduction: "Microsoft Azure is a cloud computing platform run by Microsoft. It offers access, management, and development of applications and services through globally distributed data centers. Azure skills are highly demanded in enterprise companies.",
+    whyAsk: "Employers check Azure cloud skills to see if you can model subscription management, design secure active directories, configure App Services, and utilize Blob storages effectively.",
+    whoLearn: "Cloud Engineers, Azure Administrators, DevOps Engineers, and Enterprise Full Stack Developers.",
+    roadmap: [
+      "Understand cloud service models (IaaS, PaaS, SaaS) on Azure",
+      "Master Azure Compute (VMs, App Services, Azure Functions)",
+      "Master Azure Storage (Blob storage, Files, Queues, Disk)",
+      "Understand Azure Networking (VNet, Subnets, VPN Gateways, Traffic Manager)",
+      "Learn identity management with Microsoft Entra ID (formerly Azure AD)",
+      "Deploy templates using Azure Resource Manager (ARM) or Terraform"
+    ],
+    faq: [
+      {
+        question: "What is Microsoft Entra ID?",
+        answer: "Microsoft Entra ID (formerly Azure Active Directory) is a cloud-based identity and access management service that helps your employees sign in and access internal/external resources."
+      },
+      {
+        question: "What is the difference between Azure Blob Storage and Azure File Storage?",
+        answer: "Blob Storage is optimized for storing massive amounts of unstructured object data (like images, videos). File Storage provides managed file shares in the cloud accessible via SMB or NFS protocols."
+      }
+    ]
+  },
+  {
+    title: "Linux Interview Questions",
+    slug: "linux",
+    description: "Learn Linux system administration, file systems, permissions, shell scripting, process management, and networking commands.",
+    keywords: ["Linux Interview Questions", "Linux Commands Prep", "File Permissions Linux", "Linux Shell Scripting"],
+    updatedAt: "2026-06-15",
+    readingTime: "13 min read",
+    icon: "Terminal",
+    relatedSlugs: ["git", "docker", "sysdesign", "os"],
+    introduction: "Linux is a family of open-source Unix-like operating systems based on the Linux kernel. It is the operating system powering almost all web servers, cloud infrastructure, and databases.",
+    whyAsk: "Backend and DevOps engineers must work in Linux environments daily. Questions test command-line proficiency, automation scripts, user permissions, and network troubleshooting.",
+    whoLearn: "Backend Programmers, Systems Administrators, DevOps Engineers, and security professionals.",
+    roadmap: [
+      "Learn Linux file hierarchy and directory navigation",
+      "Master core command line utilities (grep, awk, sed, find, tar)",
+      "Understand file permissions (chmod, chown) and access control lists",
+      "Master process monitoring (top, ps, kill, nohup, systemctl)",
+      "Learn Shell Scripting basics (variables, loops, conditionals)",
+      "Understand networking diagnostics (ping, netstat, curl, dig, netcat)"
+    ],
+    faq: [
+      {
+        question: "What is the difference between a hard link and a soft (symlink) link?",
+        answer: "A hard link points to the inode of the source file, sharing content directly (cannot span file systems). A soft link points to the path of the source file, acting as a shortcut."
+      },
+      {
+        question: "How do you change permissions of a file in Linux?",
+        answer: "Use the chmod command (e.g. `chmod 755 file.sh` or `chmod +x file.sh`) which changes read (4), write (2), and execute (1) permissions for user, group, and others."
+      }
+    ]
+  },
+  {
+    title: "REST API Interview Questions",
+    slug: "rest-api",
+    description: "Study RESTful architecture, HTTP status codes, verbs, statelessness, security, and API design.",
+    keywords: ["REST API Interview Questions", "RESTful Web Services", "HTTP Status Codes API", "API Security Best Practices"],
+    updatedAt: "2026-06-15",
+    readingTime: "11 min read",
+    icon: "Globe",
+    relatedSlugs: ["graphql", "nodejs", "expressjs", "javascript"],
+    introduction: "REST (Representational State Transfer) is an architectural style for providing standards between computer systems on the web, making it easier for systems to communicate with one another. Designing RESTful APIs is a key backend competency.",
+    whyAsk: "API design impacts frontend-backend communication. Companies test your knowledge of REST constraints, HTTP methods, correct status code usage, and API security (JWT, CORS).",
+    whoLearn: "All Full Stack, Frontend, and Backend Web Engineers.",
+    roadmap: [
+      "Understand client-server architecture and HTTP protocol details",
+      "Learn the six architectural constraints of REST",
+      "Master HTTP Request Methods (GET, POST, PUT, DELETE, PATCH, OPTIONS)",
+      "Learn standard HTTP response status code families (2xx, 3xx, 4xx, 5xx)",
+      "Master API security (Token authentication, Rate limiting, CORS)",
+      "Design clean endpoint naming structures and handle versioning"
+    ],
+    faq: [
+      {
+        question: "What are the six constraints of REST architecture?",
+        answer: "They are: 1. Client-Server separation, 2. Statelessness, 3. Cacheability, 4. Uniform Interface, 5. Layered System, and 6. Code on Demand (optional)."
+      },
+      {
+        question: "What is the difference between PUT and PATCH methods?",
+        answer: "PUT replaces the entire representation of target resource with request payload. PATCH applies partial modifications to the resource, conserving bandwidth."
+      }
+    ]
+  },
+  {
+    title: "GraphQL Interview Questions",
+    slug: "graphql",
+    description: "Learn GraphQL schemas, queries, mutations, resolvers, subscriptions, and caching strategies.",
+    keywords: ["GraphQL Interview Questions", "GraphQL vs REST", "GraphQL Schema Resolvers", "N+1 Problem GraphQL"],
+    updatedAt: "2026-06-15",
+    readingTime: "13 min read",
+    icon: "Network",
+    relatedSlugs: ["rest-api", "react", "nodejs", "javascript"],
+    introduction: "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. It provides a complete description of the data in your API, giving clients the power to ask for exactly what they need.",
+    whyAsk: "GraphQL helps eliminate over-fetching and under-fetching. Interviewers want to know if you can write schemas, implement nested query resolvers, prevent N+1 database hits, and handle security limitations.",
+    whoLearn: "Frontend Developers and Backend Engineers building consumer APIs.",
+    roadmap: [
+      "Understand GraphQL advantages over RESTful APIs",
+      "Master Schema Definition Language (SDL) types and inputs",
+      "Learn GraphQL Queries, Mutations, and Subscriptions",
+      "Master resolver functions execution flow and context usage",
+      "Solve the N+1 problem using DataLoader batching utilities",
+      "Implement query depth limits and caching strategies"
+    ],
+    faq: [
+      {
+        question: "What are the benefits of GraphQL over REST?",
+        answer: "GraphQL allows the client to request only the specific fields required (preventing over-fetching), fetches multiple nested resources in a single HTTP request, and provides a strongly-typed schema."
+      },
+      {
+        question: "How do you solve the N+1 queries problem in GraphQL?",
+        answer: "You solve it using a utility like DataLoader, which batches multiple individual key lookups into a single database query and caches results within the request scope."
+      }
+    ]
+  },
+  {
+    title: "Redis Interview Questions",
+    slug: "redis",
+    description: "Solve Redis questions on data structures, caching strategies, persistence (RDB/AOF), pub/sub, and cluster mode.",
+    keywords: ["Redis Interview Questions", "Redis Caching Strategies", "Redis Data Types", "Redis Persistence RDB AOF"],
+    updatedAt: "2026-06-15",
+    readingTime: "12 min read",
+    icon: "Database",
+    relatedSlugs: ["nodejs", "sysdesign", "sql", "mongodb"],
+    introduction: "Redis (Remote Dictionary Server) is an open-source, in-memory storage used as a distributed cache, database, and message broker. Redis supports key-value maps and advanced data types, making it critical for high-speed systems.",
+    whyAsk: "Caching is essential for backend scalability. Interviewers test your knowledge of Redis data structures, cache eviction policies (LRU), write patterns, and high-availability clustered architectures.",
+    whoLearn: "Backend Engineers, Systems Architects, and Infrastructure Engineers.",
+    roadmap: [
+      "Understand memory cache vs disk database tradeoffs",
+      "Master Redis data structures (Strings, Lists, Sets, Sorted Sets, Hashes)",
+      "Learn Caching Patterns (Cache-Aside, Write-Through, Write-Behind)",
+      "Understand Persistence mechanisms: RDB snapshots and AOF logs",
+      "Learn Redis Sentinel failovers and Redis Cluster sharding",
+      "Solve cache problems: stampede, penetration, and breakdown"
+    ],
+    faq: [
+      {
+        question: "What is the difference between RDB and AOF persistence in Redis?",
+        answer: "RDB (Redis Database) takes point-in-time snapshots of your dataset at specified intervals (compact and fast recovery). AOF (Append Only File) logs every write command received (very safe, but larger file size and slower startup)."
+      },
+      {
+        question: "Explain the Cache-Aside pattern.",
+        answer: "In Cache-Aside, the application queries the cache first. If a hit occurs, it returns data. If a miss occurs, it queries the database, writes the results back to the cache, and then returns the data."
+      }
+    ]
+  },
+  {
+    title: "DBMS Interview Questions",
+    slug: "dbms",
+    description: "Master Database Management Systems theory: schemas, normalization, keys, transactions, indexing, and recovery.",
+    keywords: ["DBMS Interview Questions", "Database Normalization 1NF 2NF 3NF", "DBMS Keys Keys types", "Database Transaction Logs"],
+    updatedAt: "2026-06-15",
+    readingTime: "14 min read",
+    icon: "Database",
+    relatedSlugs: ["sql", "postgresql", "mysql", "sysdesign"],
+    introduction: "A Database Management System (DBMS) is software designed to store, retrieve, and manage data. Standard database theory covers normal forms, candidate/primary keys, locking schedules, and transaction log recovery.",
+    whyAsk: "Database theory is foundational. Employers check your normalization design skills, understanding of ACID boundaries, and transaction concurrency schedules (deadlock detection, serializability).",
+    whoLearn: "Software Developers, Data Engineers, and Database Architects.",
+    roadmap: [
+      "Understand Database architecture and schemas (3-schema architecture)",
+      "Master Entity-Relationship (ER) modeling and relations mapping",
+      "Understand Normalization rules (1NF, 2NF, 3NF, BCNF) and anomalies",
+      "Master Keys: Candidate, Primary, Alternate, Super, and Foreign keys",
+      "Understand Transaction schedules, serializability, and 2-Phase Locking (2PL)",
+      "Learn database crash recovery methods (Log-based recovery, check-pointing)"
+    ],
+    faq: [
+      {
+        question: "What is database normalization and why is it needed?",
+        answer: "Normalization is a systematic process of organizing data in a database to eliminate data redundancy (duplication) and prevent insertion, update, and deletion anomalies."
+      },
+      {
+        question: "What is the difference between Candidate Key and Primary Key?",
+        answer: "A Candidate Key is a minimal set of attributes that can uniquely identify a database row. The Primary Key is the specific candidate key selected by the database designer to identify rows."
+      }
+    ]
+  },
+  {
+    title: "Operating Systems Interview Questions",
+    slug: "os",
+    description: "Solve OS concepts: processes, threads, scheduling, memory management, virtual memory, paging, and deadlocks.",
+    keywords: ["Operating Systems Questions", "OS Process vs Thread", "Virtual Memory Paging", "OS Deadlock prevention"],
+    updatedAt: "2026-06-15",
+    readingTime: "15 min read",
+    icon: "Cpu",
+    relatedSlugs: ["linux", "sysdesign", "networks", "dsa"],
+    introduction: "An Operating System (OS) is system software that manages computer hardware and software resources and provides common services for computer programs. OS interviews focus on CPU execution contexts, memory paging, and deadlock states.",
+    whyAsk: "OS concepts help you write efficient software that utilizes processes, handles threads safely, and avoids CPU context switching bottlenecks.",
+    whoLearn: "Computer Science Students, Systems Programmers, and Backend Developers.",
+    roadmap: [
+      "Understand OS Kernel structure, user mode vs kernel mode",
+      "Master Process vs Thread states, context switching, and scheduling",
+      "Learn Process Synchronization, Mutexes, Semaphores, and Race conditions",
+      "Understand Deadlocks, detection, and Bankers Avoidance Algorithm",
+      "Master Memory management, paging, virtual memory, and page replacement",
+      "Learn File systems, disk scheduling, and I/O management"
+    ],
+    faq: [
+      {
+        question: "What is the difference between a process and a thread?",
+        answer: "A process is an independent execution program with its own memory space allocated by the OS. A thread is a subset of a process sharing its parent process’s memory space and resources, enabling fast context-switch execution."
+      },
+      {
+        question: "What are the four necessary conditions for a deadlock?",
+        answer: "A deadlock requires: 1. Mutual Exclusion, 2. Hold and Wait, 3. No Preemption, and 4. Circular Wait."
+      }
+    ]
+  },
+  {
+    title: "Computer Networks Interview Questions",
+    slug: "networks",
+    description: "Master OSI model layers, TCP/IP, IP routing, DNS, HTTP/HTTPS, SSL/TLS, and network security.",
+    keywords: ["Computer Networks Interview", "OSI Model Layers", "TCP vs UDP protocols", "DNS lookup process"],
+    updatedAt: "2026-06-15",
+    readingTime: "14 min read",
+    icon: "Globe",
+    relatedSlugs: ["rest-api", "sysdesign", "os", "linux"],
+    introduction: "Computer Networking is the discipline of connecting computers together to share data. Networking interviews test your understanding of data encapsulation, connection handshakes, routing, name resolution (DNS), and SSL/TLS secure channels.",
+    whyAsk: "APIs and microservices interact over networks. Engineers must understand TCP packet drops, latencies, DNS flows, and encryption protocols to write reliable distributed software.",
+    whoLearn: "Network Engineers, Backend Programmers, and Cloud/DevOps Administrators.",
+    roadmap: [
+      "Understand network topologies and networking hardware",
+      "Master the 7 Layers of the OSI Model and 4 Layers of TCP/IP",
+      "Understand IP addressing, subnet masking, and routing protocols",
+      "Master Transport Protocols: TCP (handshake, congestion control) vs UDP",
+      "Understand Application layer services: DNS lookup, DHCP, and HTTP/HTTPS",
+      "Deep dive into SSL/TLS handshake and public-key cryptography"
+    ],
+    faq: [
+      {
+        question: "Explain the 7 layers of the OSI model.",
+        answer: "They are: 1. Physical (transmits raw bits), 2. Data Link (node-to-node frames), 3. Network (packet routing/IP), 4. Transport (end-to-end TCP/UDP), 5. Session (manages dialogs), 6. Presentation (syntax/encryption), and 7. Application (user software APIs)."
+      },
+      {
+        question: "How does the TCP 3-way handshake work?",
+        answer: "It establishes a reliable connection: 1. Client sends SYN (Synchronize) packet, 2. Server replies with SYN-ACK, 3. Client sends ACK (Acknowledge) back to confirm."
+      }
+    ]
+  },
+  {
+    title: "Data Structures Interview Questions",
+    slug: "dsa",
+    description: "Solve interview questions on arrays, linked lists, stacks, queues, trees, BSTs, heaps, and graphs.",
+    keywords: ["Data Structures Questions", "Linked List Arrays", "Binary Search Tree Questions", "Graph Data Structures"],
+    updatedAt: "2026-06-15",
+    readingTime: "16 min read",
+    icon: "GitCommit",
+    relatedSlugs: ["algorithms", "oop", "javascript", "java"],
+    introduction: "A data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data. Mastering data structures is critical for passing algorithmic coding screens.",
+    whyAsk: "Data structures test your ability to structure code data efficiently. Interviews evaluate if you know the time/space trade-offs of storing data in hashes, trees, or arrays.",
+    whoLearn: "All developers preparing for technical coding assessments.",
+    roadmap: [
+      "Learn basic memory layout (Arrays and Dynamic Arrays)",
+      "Master Linked Lists (Singly, Doubly, Circular, operations)",
+      "Understand LIFO/FIFO structures: Stacks and Queues",
+      "Master Hash Tables, hash functions, and collision resolutions",
+      "Understand Hierarchical structures: Trees, Binary Search Trees, and Heaps",
+      "Master Graphs (Representations: Adjacency list and matrix)"
+    ],
+    faq: [
+      {
+        question: "What is the difference between an Array and a Linked List?",
+        answer: "Arrays store elements in contiguous memory slots, allowing O(1) random access but O(N) insert/delete shifts. Linked Lists store elements in non-contiguous nodes pointing to next addresses, allowing O(1) inserts but O(N) traversal lookups."
+      },
+      {
+        question: "How does a Hash Table handle key collisions?",
+        answer: "Collisions occur when different keys hash to the same bucket index. They are resolved via Chaining (storing colliding keys in a linked list at that index) or Open Addressing (finding another empty bucket slot using linear/quadratic probing)."
+      }
+    ]
+  },
+  {
+    title: "Algorithms Interview Questions",
+    slug: "algorithms",
+    description: "Master sorting, searching, recursion, dynamic programming, greedy algorithms, and time/space complexity (Big O).",
+    keywords: ["Algorithms Interview Questions", "Big O Notation Complexity", "Dynamic Programming Prep", "Sorting Searching Algorithms"],
+    updatedAt: "2026-06-15",
+    readingTime: "18 min read",
+    icon: "GitCommit",
+    relatedSlugs: ["dsa", "oop", "python", "cpp"],
+    introduction: "An algorithm is a finite sequence of rigorous instructions, typically used to solve a class of specific problems or to perform a computation. Algorithm interviews assess time and space complexity efficiency (Big O).",
+    whyAsk: "Employers look for logical thinking and problem-solving speed. They evaluate if you can write optimized algorithms that scale, rather than brute-force loops.",
+    whoLearn: "Software Engineers preparing for FAANG/product company coding screens.",
+    roadmap: [
+      "Master Big O Notation, Time and Space complexity evaluation",
+      "Understand Search (Binary Search, BFS, DFS) and recursion",
+      "Master Sorting Algorithms (Bubble, Insertion, Merge, Quick, Heap sort)",
+      "Learn Divide and Conquer and Greedy algorithms strategy",
+      "Master Dynamic Programming (Memoization, Tabulation, Knapsack, LCS)",
+      "Understand graph algorithms (Dijkstra, Kruskal, Prim, Topological sort)"
+    ],
+    faq: [
+      {
+        question: "What is Big O notation?",
+        answer: "Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity, representing worst-case time/space scaling."
+      },
+      {
+        question: "What is the difference between Merge Sort and Quick Sort?",
+        answer: "Merge Sort is a stable sorting algorithm that splits arrays in half, recursively sorts them, and merges them back (always O(N log N) time, but O(N) space). Quick Sort is unstable, sorts in-place (O(1) space) by partitioning around a pivot, averaging O(N log N) time but worst-case O(N^2)."
+      }
+    ]
+  },
+  {
+    title: "OOP Interview Questions",
+    slug: "oop",
+    description: "Master Object-Oriented Programming principles: Encapsulation, Inheritance, Polymorphism, Abstraction, and SOLID.",
+    keywords: ["OOP Interview Questions", "SOLID Principles OOP", "Polymorphism Abstraction", "Encapsulation Inheritance"],
+    updatedAt: "2026-06-15",
+    readingTime: "12 min read",
+    icon: "Code2",
+    relatedSlugs: ["java", "cpp", "python", "dsa"],
+    introduction: "Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data and code. Standard OOP interviews test encapsulation, inheritance, polymorphism, and class designs.",
+    whyAsk: "OOP is used to design clean, modular, and maintainable software architectures. Interviewers check if you know how to write classes that adhere to SOLID guidelines.",
+    whoLearn: "Backend Engineers, UI Architects, and Java/C++ developers.",
+    roadmap: [
+      "Understand Procedural vs Object-Oriented design",
+      "Master the 4 pillars of OOP (Encapsulation, Inheritance, Polymorphism, Abstraction)",
+      "Learn Class constructors, destructors, overloading, and overriding",
+      "Understand Interfaces, Abstract Classes, and Multiple Inheritance conflicts",
+      "Master SOLID Design Principles (Single responsibility, Open-closed, etc.)",
+      "Explore Gang of Four (GoF) design patterns (Singleton, Factory, Observer)"
+    ],
+    faq: [
+      {
+        question: "Explain the four pillars of Object-Oriented Programming.",
+        answer: "They are: 1. Encapsulation (bundling data and methods, hiding internals), 2. Inheritance (reusing code from parent classes), 3. Polymorphism (allowing one interface to represent multiple forms), and 4. Abstraction (hiding implementation details and showing only essentials)."
+      },
+      {
+        question: "What are the SOLID principles?",
+        answer: "SOLID is an acronym for: S - Single Responsibility, O - Open/Closed (open for extension, closed for modification), L - Liskov Substitution, I - Interface Segregation, and D - Dependency Inversion."
+      }
+    ]
+  },
+  {
+    title: "Behavioral Interview Questions",
+    slug: "behavioral",
+    description: "Structure your behavioral answers with the STAR method: leadership, teamwork, conflict resolution, and failures.",
+    keywords: ["Behavioral Interview Questions", "STAR Method Interview", "Conflict Resolution Behavioral", "Leadership Situational Questions"],
+    updatedAt: "2026-06-15",
+    readingTime: "12 min read",
+    icon: "Users",
+    relatedSlugs: ["hr", "aptitude"],
+    introduction: "Behavioral interviews test how you handled professional situations in the past to predict how you will act in the future. Candidates should prepare concise stories about conflict, leadership, failure, and teamwork.",
+    whyAsk: "Technical skills get you interviews, but behavioral alignment gets you hired. Companies look for culture fit, grit, collaboration, communication, and self-reflection.",
+    whoLearn: "All professionals preparing for job interviews.",
+    roadmap: [
+      "Understand why companies ask behavioral questions",
+      "Master the STAR method structure (Situation, Task, Action, Result)",
+      "Prepare stories for Teamwork and Collaboration scenarios",
+      "Prepare stories for Leadership, Initiative, and Mentorship",
+      "Formulate stories for Failure, Mistake, and handling stressful situations",
+      "Practice clean verbal delivery and concise quantitative result framing"
+    ],
+    faq: [
+      {
+        question: "What is the STAR method?",
+        answer: "STAR is a structured technique: S - Situation (describe context), T - Task (explain responsibility/challenge), A - Action (detail steps you took), and R - Result (share outcome metrics/lessons learned)."
+      },
+      {
+        question: "How do you handle a disagreement on technical implementation with a senior teammate?",
+        answer: "I active-listen to understand their design motivations, evaluate trade-offs objectively using data or code prototypes (POC), attempt to find alignment, and follow the 'disagree and commit' principle once a path is decided."
+      }
+    ]
+  },
+  {
+    title: "Aptitude Interview Questions",
+    slug: "aptitude",
+    description: "Master quantitative aptitude, logical reasoning, and puzzle-solving questions commonly asked in screen rounds.",
+    keywords: ["Aptitude Interview Questions", "Quantitative Aptitude puzzles", "Logical Reasoning questions", "Coding Aptitude Round"],
+    updatedAt: "2026-06-15",
+    readingTime: "11 min read",
+    icon: "TrendingUp",
+    relatedSlugs: ["behavioral", "hr"],
+    introduction: "Aptitude assessments measure a candidate's cognitive abilities, numerical agility, logical reasoning, and puzzle-solving speed. They are commonly used as initial screening filters for software roles.",
+    whyAsk: "Employers use aptitude questions to evaluate quick analytical thinking, numeric agility, pattern recognition, and problem-solving structures under timed constraints.",
+    whoLearn: "Graduates and professionals preparing for initial hiring screens.",
+    roadmap: [
+      "Master Number Systems, Divisibility rules, and HCF/LCM",
+      "Understand Arithmetic formulas (Percentages, Profit/Loss, Ratio & Proportion)",
+      "Learn Time, Speed, Distance, and Work rate equations",
+      "Master Logical Reasoning (Blood relations, syllogisms, sequence coding)",
+      "Learn classic Tech Interview Puzzles (e.g., crossing bridges, burning ropes)",
+      "Practice data interpretation charts and time management tactics"
+    ],
+    faq: [
+      {
+        question: "What is the best way to prepare for initial screening puzzles?",
+        answer: "Study classic interview puzzles (like '3 lightbulbs and 3 switches' or '2 eggs and 100 floors'), and focus on explaining your logical reasoning path clearly, even if you do not find the exact numeric answer."
+      },
+      {
+        question: "How is logical reasoning tested in coding assessments?",
+        answer: "It is tested through pattern recognition questions, sequence tracking, syllogisms, and flow charts that mirror code conditional logic."
+      }
+    ]
   }
 ];
 
 export const getCategoryBySlug = (slug: string): Category | undefined => {
   return categories.find(c => c.slug === slug);
 };
+

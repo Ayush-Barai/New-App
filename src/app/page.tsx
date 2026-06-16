@@ -1,16 +1,23 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
+import type { Metadata } from 'next';
 import { 
-  Search, Atom, FileCode, ShieldAlert, Layers, Server, 
+  Atom, FileCode, ShieldAlert, Layers, Server, 
   Database, Code2, Palette, GitBranch, Cloud, GitCommit, 
-  Users, ArrowRight, BookOpen, Sparkles, TrendingUp 
+  Users, ArrowRight, BookOpen, Sparkles, TrendingUp,
+  Coffee, Terminal, Globe, Network, Compass
 } from 'lucide-react';
 import { categories } from '../data/categories';
-import FuzzySearch from '../components/FuzzySearch';
+import HomeHeroSearch from '../components/HomeHeroSearch';
+
+export const metadata: Metadata = {
+  title: "Master Technical Interviews with Curated Q&As | PrepHub",
+  description: "Prepare for coding, system design, databases, frontend, backend, DevOps, and behavioral interviews with structured, high-quality questions and detailed answers.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
-  const [searchOpen, setSearchOpen] = useState(false);
 
   // Map icon strings to Lucide components
   const iconMap: Record<string, React.ComponentType<any>> = {
@@ -25,7 +32,13 @@ export default function Home() {
     GitBranch: GitBranch,
     Cloud: Cloud,
     GitCommit: GitCommit,
-    Users: Users
+    Users: Users,
+    Coffee: Coffee,
+    Terminal: Terminal,
+    Globe: Globe,
+    Network: Network,
+    Compass: Compass,
+    TrendingUp: TrendingUp
   };
 
   const trendingTopics = [
@@ -62,18 +75,7 @@ export default function Home() {
           </p>
 
           {/* Hero Search Box */}
-          <div className="max-w-xl mx-auto pt-4">
-            <button
-              onClick={() => setSearchOpen(true)}
-              className="flex w-full items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-900 hover:border-slate-700 px-4 py-3.5 text-slate-400 transition-all text-sm sm:text-base shadow-xl"
-            >
-              <Search className="w-5 h-5 text-slate-500" />
-              <span className="flex-grow text-left">Search by technology, question, or keyword...</span>
-              <kbd className="hidden sm:inline-flex h-6 select-none items-center gap-0.5 rounded border border-slate-700 bg-slate-800 px-2 font-mono text-xs text-slate-400">
-                Ctrl K
-              </kbd>
-            </button>
-          </div>
+          <HomeHeroSearch />
 
           {/* Trending keywords */}
           <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1.5 text-xs text-slate-500 pt-2">
@@ -209,9 +211,6 @@ export default function Home() {
 
         </div>
       </section>
-
-      {/* Global Search trigger for Cmd+K */}
-      <FuzzySearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
     </div>
   );

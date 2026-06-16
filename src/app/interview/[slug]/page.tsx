@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { categories } from '../../../data/categories';
 import { questions } from '../../../data/questions';
-import QuestionCard from '../../../components/QuestionCard';
+import QuestionsList from '../../../components/QuestionsList';
 import JsonLd from '../../../components/JsonLd';
 import { ChevronRight, Calendar, BookOpen, Layers, Terminal, AlertCircle } from 'lucide-react';
 
@@ -209,6 +209,23 @@ export default async function CategoryPage({ params }: PageProps) {
         {/* Content Body */}
         <section className="lg:col-span-3 space-y-12">
           
+          {/* Mobile Quick Navigation (visible only on mobile/tablet) */}
+          <div className="lg:hidden rounded-xl border border-slate-900 bg-slate-900/10 p-3.5 flex flex-wrap gap-2 text-xs font-semibold text-slate-400">
+            <span className="text-slate-500 py-1">Jump to:</span>
+            <a href="#intro" className="hover:text-blue-400 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800 transition-colors">Introduction</a>
+            <a href="#roadmap" className="hover:text-blue-400 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800 transition-colors">Roadmap</a>
+            {beginnerQs.length > 0 && (
+              <a href="#beginner" className="hover:text-blue-400 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800 transition-colors">Beginner</a>
+            )}
+            {intermediateQs.length > 0 && (
+              <a href="#intermediate" className="hover:text-blue-400 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800 transition-colors">Intermediate</a>
+            )}
+            {advancedQs.length > 0 && (
+              <a href="#advanced" className="hover:text-blue-400 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800 transition-colors">Advanced</a>
+            )}
+            <a href="#faq" className="hover:text-blue-400 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800 transition-colors">FAQs</a>
+          </div>
+          
           {/* Introduction */}
           <div id="intro" className="space-y-3 scroll-mt-24">
             <h2 className="text-xl sm:text-2xl font-bold text-slate-200">Introduction</h2>
@@ -257,52 +274,7 @@ export default async function CategoryPage({ params }: PageProps) {
 
           {/* Questions Sections */}
           <div className="space-y-8">
-            {beginnerQs.length > 0 && (
-              <div id="beginner" className="space-y-4 scroll-mt-24">
-                <h2 className="text-lg sm:text-xl font-bold text-slate-200 border-b border-slate-900 pb-2">
-                  Beginner Level Questions
-                </h2>
-                <div className="space-y-4">
-                  {beginnerQs.map((q) => (
-                    <QuestionCard key={q.id} question={q} />
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {intermediateQs.length > 0 && (
-              <div id="intermediate" className="space-y-4 scroll-mt-24">
-                <h2 className="text-lg sm:text-xl font-bold text-slate-200 border-b border-slate-900 pb-2">
-                  Intermediate Level Questions
-                </h2>
-                <div className="space-y-4">
-                  {intermediateQs.map((q) => (
-                    <QuestionCard key={q.id} question={q} />
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {advancedQs.length > 0 && (
-              <div id="advanced" className="space-y-4 scroll-mt-24">
-                <h2 className="text-lg sm:text-xl font-bold text-slate-200 border-b border-slate-900 pb-2">
-                  Advanced Level Questions
-                </h2>
-                <div className="space-y-4">
-                  {advancedQs.map((q) => (
-                    <QuestionCard key={q.id} question={q} />
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {catQuestions.length === 0 && (
-              <div className="rounded-lg border border-dashed border-slate-800 p-8 text-center text-slate-500 space-y-1">
-                <AlertCircle className="w-8 h-8 mx-auto text-slate-600" />
-                <p className="text-sm font-semibold">No questions loaded for this category yet.</p>
-                <p className="text-xs">We are currently compiles questions. Check back soon!</p>
-              </div>
-            )}
+            <QuestionsList questions={catQuestions} />
           </div>
 
           {/* FAQs Accordion */}

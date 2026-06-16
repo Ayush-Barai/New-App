@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { categories } from '../../data/categories';
 import { questions } from '../../data/questions';
-import { Terminal, Database, ShieldAlert, Cpu, ChevronRight } from 'lucide-react';
+import { Terminal, Database, Users, ChevronRight } from 'lucide-react';
 import JsonLd from '../../components/JsonLd';
 
 export const metadata: Metadata = {
@@ -18,46 +18,23 @@ export default function InterviewDirectoryPage() {
   const domains = [
     {
       name: "Frontend Development",
-      description: "Libraries, frameworks, and core browser technologies.",
+      description: "Libraries, frameworks, and core browser styling technologies.",
       icon: Terminal,
-      slugs: ["react", "javascript", "typescript", "html", "css"]
+      slugs: ["react", "javascript", "typescript", "nextjs", "html", "css", "tailwind-css", "bootstrap"]
     },
     {
       name: "Backend & Cloud",
-      description: "Server architectures, cloud databases, and services.",
+      description: "Server frameworks, caching systems, cloud deployment, and system architecture.",
       icon: Database,
-      slugs: ["nodejs", "sql", "sysdesign", "aws"]
+      slugs: ["nodejs", "expressjs", "rest-api", "graphql", "redis", "sql", "mongodb", "postgresql", "mysql", "aws", "azure", "docker", "kubernetes", "linux", "sysdesign", "dbms"]
     },
     {
       name: "Core CS & Soft Skills",
-      description: "Collaboration, situational questions, and behavioral alignments.",
-      icon: UsersIcon,
-      slugs: ["git", "hr"]
+      description: "Algorithms, data structures, version control, OOP, aptitude, and behavioral alignment.",
+      icon: Users,
+      slugs: ["dsa", "algorithms", "oop", "os", "networks", "git", "github", "python", "java", "c", "cpp", "hr", "behavioral", "aptitude"]
     }
   ];
-
-  // Users Icon fallback since lucide users requires import
-  function UsersIcon(props: any) {
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        {...props}
-      >
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    );
-  }
 
   // Schema data
   const breadcrumbSchema = {
