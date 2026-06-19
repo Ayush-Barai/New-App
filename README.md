@@ -1,3 +1,7 @@
+## Project Live link
+
+open [PrepHub](https://prephub-ten.vercel.app/) with your browser to see the result.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
