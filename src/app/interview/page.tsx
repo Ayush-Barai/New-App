@@ -6,8 +6,14 @@ import { Terminal, Database, Users, ChevronRight } from 'lucide-react';
 import JsonLd from '../../components/JsonLd';
 
 export const metadata: Metadata = {
-  title: "All Interview Topics - PrepHub",
-  description: "Browse our comprehensive directory of interview questions grouped by technical domains: Frontend, Backend, Databases, Tools, and soft skills.",
+  title: "All Technical & Coding Interview Topics | PrepHub",
+  description: "Browse our comprehensive directory of programming and technical interview questions grouped by domains: Frontend, Backend, Databases, Systems, and behavioral skills.",
+  keywords: [
+    "Technical Interview Questions",
+    "Coding Interview Questions",
+    "Programming Interview Questions",
+    "Software Engineer Preparation"
+  ],
   alternates: {
     canonical: "/interview",
   },

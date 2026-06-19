@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${category.title} - PrepHub`,
     description: category.description,
+    keywords: category.keywords,
     alternates: {
       canonical: `/interview/${slug}`,
     },
@@ -34,6 +35,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `https://prephub.vercel.app/interview/${slug}`,
       type: 'article',
       modifiedTime: category.updatedAt,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${category.title} - PrepHub`,
+      description: category.description,
     },
   };
 }
@@ -180,7 +186,8 @@ export default async function CategoryPage({ params }: PageProps) {
               )}
               
               <a href="#faq" className="block hover:text-blue-400 transition-colors">FAQs</a>
-              <a href="#related" className="block hover:text-blue-400 transition-colors">Related Topics</a>
+              <a href="#next-topics" className="block hover:text-blue-400 transition-colors">Next Topics</a>
+              <a href="#cta" className="block hover:text-blue-400 transition-colors">Get Started</a>
             </nav>
           </div>
 
@@ -224,6 +231,8 @@ export default async function CategoryPage({ params }: PageProps) {
               <a href="#advanced" className="hover:text-blue-400 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800 transition-colors">Advanced</a>
             )}
             <a href="#faq" className="hover:text-blue-400 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800 transition-colors">FAQs</a>
+            <a href="#next-topics" className="hover:text-blue-400 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800 transition-colors">Next Topics</a>
+            <a href="#cta" className="hover:text-blue-400 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800 transition-colors">Get Started</a>
           </div>
           
           {/* Introduction */}
@@ -307,6 +316,62 @@ export default async function CategoryPage({ params }: PageProps) {
                   </p>
                 </details>
               ))}
+            </div>
+          </div>
+
+          {/* Recommended Next Topics (Step 7 & 9) */}
+          {relatedCats.length > 0 && (
+            <div id="next-topics" className="space-y-4 scroll-mt-24 pt-6 border-t border-slate-900/80">
+              <h2 className="text-lg sm:text-xl font-bold text-slate-200">Recommended Next Topics</h2>
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                Strengthen your skills and continue your software engineering preparation with these related modules:
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                {relatedCats.map((rel, idx) => (
+                  <a
+                    key={idx}
+                    href={`/interview/${rel.slug}`}
+                    className="group p-5 rounded-xl border border-slate-900 bg-slate-900/20 hover:bg-slate-900/60 hover:border-slate-800 transition-all flex flex-col justify-between"
+                  >
+                    <div className="space-y-2">
+                      <h3 className="font-bold text-slate-200 group-hover:text-blue-400 transition-colors">
+                        {rel.title}
+                      </h3>
+                      <p className="text-slate-400 text-xs leading-relaxed line-clamp-2">
+                        {rel.description}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-1 text-[11px] text-blue-400 font-semibold mt-4 group-hover:text-blue-300">
+                      <span>Explore {rel.title.replace(" Interview Questions", "")} Questions</span>
+                      <ChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* CTA Section (Step 7) */}
+          <div id="cta" className="rounded-xl border border-blue-500/20 bg-gradient-to-r from-blue-950/20 via-slate-900/40 to-purple-950/10 p-6 sm:p-8 text-center space-y-4 scroll-mt-24">
+            <h2 className="text-lg sm:text-2xl font-bold text-white tracking-tight">
+              Ready to Ace Your Software Engineering Interview?
+            </h2>
+            <p className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto leading-relaxed">
+              We compile, verify, and update thousands of programming interview questions daily to give you the ultimate edge. Stay updated with our latest resources.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+              <a
+                href="/interview"
+                className="px-5 py-2.5 text-xs sm:text-sm font-semibold text-slate-950 bg-blue-500 hover:bg-blue-400 rounded-lg transition-colors"
+              >
+                Browse All 40+ Topics
+              </a>
+              <a
+                href="#newsletter-email"
+                className="px-5 py-2.5 text-xs sm:text-sm font-semibold text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 bg-slate-900/40 rounded-lg transition-colors"
+              >
+                Get Weekly Tips
+              </a>
             </div>
           </div>
 
